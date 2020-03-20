@@ -1,0 +1,12 @@
+Project: Assignment 2 Street Fighter HTML Collision Game
+Class: Online Gaming 2
+Instructor: Adel Muhammad
+By: Tristan Garzon (N01044766
+
+
+Completed Steps:
+1. Collision feature using rectangle colliders
+2. Implemented two different fighters
+3. Background implemented along with movement along the X and Y axis
+4. AI hit detection animation response 
+5. Multiple moves implemented

@@ -1,0 +1,329 @@
+/*Background Colour*/
+body { background-color: black; margin: 0; }
+
+.stage { width: 800px; height: 350px; margin: 0 auto; overflow: hidden; position: relative; z-index: 0; background: url(../images/bg5.gif) no-repeat 0px 20px; background-size: contain; }
+
+ /*Flip for AI*/
+.flip { -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1); -ms-transform: scaleX(-1); transform: scaleX(-1); }
+
+.ken, .fireball { position: absolute; bottom: 112px; margin-left: 90px; width: 70px; height: 80px; background-image: url(../images/ken.png); }
+.ken:before, .fireball:before { content: ''; z-index: -1; position: absolute; bottom: -2px; left: 17px; right: 17px; height: 6px; background-color: rgba(0, 0, 0, 0.4); -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 5px; -moz-box-shadow: 0 0 5px; box-shadow: 0 0 5px; }
+
+
+
+/*Fireball*/
+.fireball { position: absolute; left: 100%; bottom: 0px; margin-left: 0; background-position: 140px 320px; -webkit-transition: margin 6s linear; -moz-transition: margin 6s linear; -ms-transition: margin 6s linear; transition: margin 6s linear; -webkit-animation: fireball steps(2) 0.15s infinite; -moz-animation: fireball steps(2) 0.15s infinite; -ms-animation: fireball steps(2) 0.15s infinite; animation: fireball steps(2) 0.15s infinite; }
+.fireball:before { left: 25px; right: 25px; }
+.fireball.moving { margin-left: 2000px; }
+
+@-webkit-keyframes fireball { from { background-position: 0px -320px; }
+  to { background-position: -140px -320px; } }
+
+@-moz-keyframes fireball { from { background-position: 0px -320px; }
+  to { background-position: -140px -320px; } }
+
+@-ms-keyframes fireball { from { background-position: 0px -320px; }
+  to { background-position: -140px -320px; } }
+
+@keyframes fireball { from { background-position: 0px -320px; }
+  to { background-position: -140px -320px; } }
+
+  
+  
+  
+/*Characters fireball impact explosion*/
+.explode { -webkit-animation: explode steps(4) 0.5s 1; -moz-animation: explode steps(4) 0.5s 1; -ms-animation: explode steps(4) 0.5s 1; animation: explode steps(4) 0.5s 1; }
+
+@-webkit-keyframes explode { from { background-position: 0px -400px; }
+  to { background-position: -280px -400px; } }
+
+@-moz-keyframes explode { from { background-position: 0px -400px; }
+  to { background-position: -280px -400px; } }
+
+@-ms-keyframes explode { from { background-position: 0px -400px; }
+  to { background-position: -280px -400px; } }
+
+@keyframes explode { from { background-position: 0px -400px; }
+  to { background-position: -280px -400px; } }
+
+  
+  
+/*Character Spawn Frames */
+.stance { -webkit-animation: stance steps(4) 0.5s infinite; -moz-animation: stance steps(4) 0.5s infinite; -ms-animation: stance steps(4) 0.5s infinite; animation: stance steps(4) 0.5s infinite; }
+
+@-webkit-keyframes stance { from { background-position: 0px -80px; }
+  to { background-position: -280px -80px; } }
+
+@-moz-keyframes stance { from { background-position: 0px -80px; }
+  to { background-position: -280px -80px; } }
+
+@-ms-keyframes stance { from { background-position: 0px -80px; }
+  to { background-position: -280px -80px; } }
+
+@keyframes stance { from { background-position: 0px -80px; }
+  to { background-position: -280px -80px; } }
+
+  
+  
+  
+  
+/*Hadoken*/
+.hadoken { -webkit-animation: hadoken steps(4) 0.5s infinite; -moz-animation: hadoken steps(4) 0.5s infinite; -ms-animation: hadoken steps(4) 0.5s infinite; animation: hadoken steps(4) 0.5s infinite; }
+
+@-webkit-keyframes hadoken { from { background-position: 0px 0px; }
+  to { background-position: -280px 0px; } }
+
+@-moz-keyframes hadoken { from { background-position: 0px 0px; }
+  to { background-position: -280px 0px; } }
+
+@-ms-keyframes hadoken { from { background-position: 0px 0px; }
+  to { background-position: -280px 0px; } }
+
+@keyframes hadoken { from { background-position: 0px 0px; }
+  to { background-position: -280px 0px; } }
+
+  
+  
+  
+/*Punch*/
+.punch { -webkit-animation: punch steps(3) 0.15s infinite; -moz-animation: punch steps(3) 0.15s infinite; -ms-animation: punch steps(3) 0.15s infinite; animation: punch steps(3) 0.15s infinite; }
+
+@-webkit-keyframes punch { from { background-position: 0px -160px; }
+  to { background-position: -210px -160px; } }
+
+@-moz-keyframes punch { from { background-position: 0px -160px; }
+  to { background-position: -210px -160px; } }
+
+@-ms-keyframes punch { from { background-position: 0px -160px; }
+  to { background-position: -210px -160px; } }
+
+@keyframes punch { from { background-position: 0px -160px; }
+  to { background-position: -210px -160px; } }
+
+  
+  
+  
+/*Character Walking*/
+.walk { -webkit-animation: walk steps(5) 0.5s infinite; -moz-animation: walk steps(5) 0.5s infinite; -ms-animation: walk steps(5) 0.5s infinite; animation: walk steps(5) 0.5s infinite; }
+
+@-webkit-keyframes walk { from { background-position: 0px -240px; }
+  to { background-position: -350px -240px; } }
+
+@-moz-keyframes walk { from { background-position: 0px -240px; }
+  to { background-position: -350px -240px; } }
+
+@-ms-keyframes walk { from { background-position: 0px -240px; }
+  to { background-position: -350px -240px; } }
+
+@keyframes walk { from { background-position: 0px -240px; }
+  to { background-position: -350px -240px; } }
+
+  
+  
+  
+/*Kick*/
+.kick { -webkit-animation: kick steps(5) 0.5s infinite; -moz-animation: kick steps(5) 0.5s infinite; -ms-animation: kick steps(5) 0.5s infinite; animation: kick steps(5) 0.5s infinite; }
+
+@-webkit-keyframes kick { from { background-position: 0px -480px; }
+  to { background-position: -350px -480px; } }
+
+@-moz-keyframes kick { from { background-position: 0px -480px; }
+  to { background-position: -350px -480px; } }
+
+@-ms-keyframes kick { from { background-position: 0px -480px; }
+  to { background-position: -350px -480px; } }
+
+@keyframes kick { from { background-position: 0px -480px; }
+  to { background-position: -350px -480px; } }
+
+  
+  
+  
+  
+  
+  
+/*Crouch*/
+.kneel { -webkit-animation: kneel steps(1) 0.2s infinite; -moz-animation: kneel steps(1) 0.2s infinite; -ms-animation: kneel steps(1) 0.2s infinite; animation: kneel steps(1) 0.2s infinite; }
+
+@-webkit-keyframes kneel { from { background-position: 0px -720px; }
+  to { background-position: -70px -720px; } }
+
+@-moz-keyframes kneel { from { background-position: 0px -720px; }
+  to { background-position: -70px -720px; } }
+
+@-ms-keyframes kneel { from { background-position: 0px -720px; }
+  to { background-position: -70px -720px; } }
+
+@keyframes kneel { from { background-position: 0px -720px; }
+  to { background-position: -70px -720px; } }
+
+  
+  
+  
+  
+  
+/*Jump*/
+.jump { -webkit-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42); -moz-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42); -ms-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42); transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42); bottom: 225px; -webkit-animation: jump steps(7) 1s infinite; -moz-animation: jump steps(7) 1s infinite; -ms-animation: jump steps(7) 1s infinite; animation: jump steps(7) 1s infinite; }
+.jump.down { bottom: 112px; }
+
+@-webkit-keyframes jump { from { background-position: 0px -640px; }
+  to { background-position: -490px -640px; } }
+
+@-moz-keyframes jump { from { background-position: 0px -640px; }
+  to { background-position: -490px -640px; } }
+
+@-ms-keyframes jump { from { background-position: 0px -640px; }
+  to { background-position: -490px -640px; } }
+
+@keyframes jump { from { background-position: 0px -640px; }
+  to { background-position: -490px -640px; } }
+
+  
+ 
+  
+/*Tatsumaki Senpuu*/
+.tatsumaki { height: 110px; background-image: url(../images/ken-tatsumaki-senpuu-kyaku.png); -webkit-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42); -moz-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42); -ms-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42); transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42); bottom: 132px; -webkit-animation: tatsumaki steps(13) 2s infinite; -moz-animation: tatsumaki steps(13) 2s infinite; -ms-animation: tatsumaki steps(13) 2s infinite; animation: tatsumaki steps(13) 2s infinite; }
+.tatsumaki.down { bottom: 112px; }
+
+@-webkit-keyframes tatsumaki { from { background-position: 0px 0px; }
+  to { background-position: -910px 0px; } }
+
+@-moz-keyframes tatsumaki { from { background-position: 0px 0px; }
+  to { background-position: -910px 0px; } }
+
+@-ms-keyframes tatsumaki { from { background-position: 0px 0px; }
+  to { background-position: -910px 0px; } }
+
+@keyframes tatsumaki { from { background-position: 0px 0px; }
+  to { background-position: -910px 0px; } }
+
+.guile { position: absolute; bottom: 112px; margin-left: 280px; width: 70px; height: 90px; background-image: url(../images/guile.png); }
+
+
+
+
+
+
+/*AI Spawn Frames*/
+.stance2 { -webkit-animation: stance2 steps(3) 0.5s infinite; -moz-animation: stance2 steps(3) 0.5s infinite; -ms-animation: stance2 steps(3) 0.5s infinite; animation: stance2 steps(3) 0.5s infinite; }
+
+@-webkit-keyframes stance2 { from { background-position: 0px 0px; }
+  to { background-position: -210px 0px; } }
+
+@-moz-keyframes stance2 { from { background-position: 0px 0px; }
+  to { background-position: -210px 0px; } }
+
+@-ms-keyframes stance2 { from { background-position: 0px 0px; }
+  to { background-position: -210px 0px; } }
+
+@keyframes stance2 { from { background-position: 0px 0px; }
+  to { background-position: -210px 0px; } }
+
+  
+  
+  
+/*AI Hit Kick*/
+.hit1 { background-image: url(../images/guile-hit.png); -webkit-animation: hit1 steps(1) 0.5s infinite; -moz-animation: hit1 steps(1) 0.5s infinite; -ms-animation: hit1 steps(1) 0.5s infinite; animation: hit1 steps(1) 0.5s infinite; }
+
+@-webkit-keyframes hit1 { from { background-position: 0px 0px; }
+  to { background-position: -70px 0px; } }
+
+@-moz-keyframes hit1 { from { background-position: 00px 0px; }
+  to { background-position: -70px 0px; } }
+
+@-ms-keyframes hit1 { from { background-position: 0px 0px; }
+  to { background-position: -70px 0px; } }
+
+@keyframes hit1 { from { background-position: 0px 0px; }
+  to { background-position: -70px 0px; } }
+
+  
+  
+/*AI Hit Punch/Fireball*/
+.hit2 { background-image: url(../images/guile-hit.png); -webkit-animation: hit2 steps(3) 0.5s infinite; -moz-animation: hit2 steps(3) 0.5s infinite; -ms-animation: hit2 steps(3) 0.5s infinite; animation: hit2 steps(3) 0.5s infinite; }
+
+@-webkit-keyframes hit2 { from { background-position: 0px -90px; }
+  to { background-position: -210px -90px; } }
+
+@-moz-keyframes hit2 { from { background-position: 0px -90px; }
+  to { background-position: -210px -90px; } }
+
+@-ms-keyframes hit2 { from { background-position: 0px -90px; }
+  to { background-position: -210px -90px; } }
+
+@keyframes hit2 { from { background-position: 0px -90px; }
+  to { background-position: -210px -90px; } }
+ 
+
+/* Health Bar Player */ 
+.health-bar {
+	 -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 250px;
+  height: 20px;
+  padding: 5px;
+  left: 530px;
+  bottom: -25px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.bar {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.hit {
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
+/* Health Bar Enemy */ 
+.health-barq {
+	 -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 250px;
+  height: 20px;
+  padding: 5px;
+  right: 755px;
+  bottom: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.barq {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.hitq {
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
